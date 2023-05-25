@@ -1,0 +1,23 @@
+CREATE TABLE `clubes` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`clube` VARCHAR(250) NOT NULL,
+	`saldo_disponivel` DECIMAL(20,2) UNSIGNED NOT NULL,
+	PRIMARY KEY (`id`) USING BTREE
+);
+
+
+INSERT INTO `clubes` (`id`, `clube`, `saldo_disponivel`, `created_at`, `updated_at`) VALUES (1, 'Clube A', 2000.00);
+INSERT INTO `clubes` (`id`, `clube`, `saldo_disponivel`, `created_at`, `updated_at`) VALUES (2, 'Clube B', 3000.00);
+
+
+CREATE TABLE `recursos` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`recurso` VARCHAR(250) NOT NULL,
+	`saldo_disponivel` DECIMAL(20,2) UNSIGNED NOT NULL,
+	PRIMARY KEY (`id`) USING BTREE
+);
+
+INSERT INTO `recursos` (`id`, `recurso`, `saldo_disponivel`, `created_at`, `updated_at`) VALUES (1, 'Recurso para passagens');
+INSERT INTO `recursos` (`id`, `recurso`, `saldo_disponivel`) VALUES (2, 'Recurso para hospedagens', 10000.00);
+
+
